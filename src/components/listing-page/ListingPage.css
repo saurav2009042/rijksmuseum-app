@@ -1,4 +1,8 @@
 .listing-page {
+    /* The height of the header is 40px. Adding 10px each of padding-top and bottom makes it a total of 60px.
+     * We add another 20px in order to be consistent with the padding-bottom of 20px of ListingPage.
+     * Hence, padding-top = 40 + (2 * 10) + 20 = 80px.
+     */
     padding: 80px 60px 20px 60px;
 
     .search-container {
@@ -23,7 +27,7 @@
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Allows for a repeating grid pattern */
         gap: 20px;
     }
 
@@ -35,7 +39,7 @@
         cursor: pointer;
 
         &:disabled {
-            cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+            cursor: not-allowed; /* Disallows the use of cursor when Load More is disabled */
         }
     }
 }
@@ -54,7 +58,7 @@
             input {
                 padding: 10px;
                 font-size: 16px;
-                width: 100%;    /* input needs to take up the full width in mobile applications */
+                width: 100%; /* input needs to take up the full width in mobile applications */
                 box-sizing: border-box;
             }
 
@@ -78,7 +82,7 @@
             width: 100%;
 
             &:disabled {
-                cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+                cursor: not-allowed; /* Disallows the use of cursor when Load More is disabled */
             }
         }
     }
@@ -98,7 +102,7 @@
             width: 100%;
 
             &:disabled {
-                cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+                cursor: not-allowed; /* Disallows the use of cursor when Load More is disabled */
             }
         }
     }
