@@ -1,0 +1,105 @@
+.listing-page {
+    padding: 80px 60px 20px 60px;
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .load-more {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+        }
+    }
+}
+
+/* Media Query for mobile layout */
+@media (max-width: 768px) {
+    .listing-page {
+        padding: 80px 20px 20px 20px;
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+
+            input {
+                padding: 10px;
+                font-size: 16px;
+                width: 100%;    /* input needs to take up the full width in mobile applications */
+                box-sizing: border-box;
+            }
+
+            button {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 5px 10px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+
+        .load-more {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+
+            &:disabled {
+                cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+            }
+        }
+    }
+}
+
+/* Media Query for tablet layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .listing-page {
+        padding: 80px 40px 20px 40px;
+
+        .load-more {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+
+            &:disabled {
+                cursor: not-allowed;    /* Disallows the use of cursor when Load More is disabled */
+            }
+        }
+    }
+}
